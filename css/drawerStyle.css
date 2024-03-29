@@ -1,0 +1,104 @@
+:root {
+    --backGround: #f8dead;
+    --secondary-color: #6A735C;
+    --tertiary-color: #F2F2F2;
+    --borderRadius: 10px;
+    --circualBackground: #dacccc;
+}
+
+.text{
+    text-transform: uppercase;
+}
+#functions{
+    opacity: 0.4;
+}
+
+.logo{
+    width: 200px;
+    margin: 50px 30px 30px 30px;
+}
+
+
+.openBtn{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translate(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav.visible{
+    transform: translate(0);
+}
+
+
+.navA{
+    background-color: var(--backGround);
+    width:30%;
+    max-width: 480px;
+    min-width: 280px;
+    transition-delay: .4s;
+}
+
+.navA.visible{
+    transition-delay: 0s;
+}
+
+.navB{
+    background-color: var(--secondary-color);
+    width: 95%;
+    transition-delay: .2s;
+}
+
+.navB.visible{
+    transition-delay: 0.2s;
+}
+
+.navC{
+    background-color: var(--tertiary-color);
+    width: 95%;
+    top: 0px;
+    transition-delay: 0s;
+}
+
+.navC.visible{
+    transition-delay: .4s;
+}
+
+.closeBtn{
+    opacity: .3;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.list{
+    list-style-type: none;
+    padding: 0px;
+    margin: 40px;
+    color: #6A735C;
+}
+
+.list li{
+    margin: 20px 0;
+}
+
+.list li a{
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.list ul{
+    list-style-type: none;
+    padding-left: 20px;
+}

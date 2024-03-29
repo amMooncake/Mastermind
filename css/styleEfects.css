@@ -1,0 +1,41 @@
+.rowSelected{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+.popupWrapper{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 10;
+}
+
+.popup{
+    background-color: var(--backGround);
+    border-radius: var(--borderRadius);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 20px;
+    position: relative;
+}
+
+.popupClose{
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    cursor: pointer;
+}
+
+
+.closeBtn:hover , .openSvg:hover{
+    transform: rotate(360deg);
+    transition: 1s cubic-bezier(.41,1.34,.78,1.12);
+}
