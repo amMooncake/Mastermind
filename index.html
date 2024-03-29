@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?xml version="1.0" encoding="UTF-8"?>
+    <title>MASTERMIND by Aleksy Malawski</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleEfects.css">
+    <link rel="stylesheet" href="./css/drawerStyle.css">
+</head>
+<body>
+    <div class="popupWrapper">
+        <div class="popup">
+            <div class="popupClose">X</div>
+            <div class="popupContent">
+                <h2>You Win!</h2>
+                <p>Congratulation</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="openBtn">
+        <img class="openSvg" src="./graficzki/openBtn.svg" alt="open" style="height: 20px; width: 20px;">
+        <!-- <embed class="svg" src="/graficzki/openBtn.svg" style="height: 20px; width: 20px;"> -->
+    </div>
+    <div class="nav navA">
+        <div class="nav navB">
+            <div class="nav navC">
+                <img class="closeBtn" src="./graficzki/closeBtn.svg" alt="open" style="height: 20px; width: 20px;">
+                <!-- <embed src="/graficzki/closeBtn.svg" class="closeBtn" style="height: 20px; width: 20px;"> -->
+                <img src="./graficzki/logo.png" alt="Logo" class="logo">
+
+                <ul class="list">
+                    <li><a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)", target="_blank">rules</a></li>
+                    <li><a id="functions" href="#">Functions:</a></li>
+                    <li>
+                        <ul>
+                            <li><a onclick="resetBtn()"  href="#">reset</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="masterContent">
+        
+        <div class="gameContent">
+            <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)", target="_blank">MASTERMIND</a>
+            <div id="gameSecreCode">
+                <div class="gameCell" id="gsc1"></div>
+                <div class="gameCell" id="gsc2"></div>
+                <div class="gameCell" id="gsc3"></div>
+                <div class="gameCell" id="gsc4"></div>
+            </div>
+            
+            <div class="gameRow" id="gr10">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc37"></div>
+                <div class="gameCell" id="gc38"></div>
+                <div class="gameCell" id="gc39"></div>
+                <div class="gameCell" id="gc40"></div>
+            </div>
+            <div class="gameRow" id="gr9">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc33"></div>
+                <div class="gameCell" id="gc34"></div>
+                <div class="gameCell" id="gc35"></div>
+                <div class="gameCell" id="gc36"></div>
+            </div>
+            <div class="gameRow" id="gr8">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc29"></div>
+                <div class="gameCell" id="gc30"></div>
+                <div class="gameCell" id="gc31"></div>
+                <div class="gameCell" id="gc32"></div>
+            </div>
+            <div class="gameRow" id="gr7">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc25"></div>
+                <div class="gameCell" id="gc26"></div>
+                <div class="gameCell" id="gc27"></div>
+                <div class="gameCell" id="gc28"></div>
+            </div>
+            <div class="gameRow" id="gr6">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc21"></div>
+                <div class="gameCell" id="gc22"></div>
+                <div class="gameCell" id="gc23"></div>
+                <div class="gameCell" id="gc24"></div>
+            </div>
+            <div class="gameRow" id="gr5">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc17"></div>
+                <div class="gameCell" id="gc18"></div>
+                <div class="gameCell" id="gc19"></div>
+                <div class="gameCell" id="gc20"></div>
+            </div>
+            <div class="gameRow" id="gr4">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc13"></div>
+                <div class="gameCell" id="gc14"></div>
+                <div class="gameCell" id="gc15"></div>
+                <div class="gameCell" id="gc16"></div>
+            </div>
+            <div class="gameRow" id="gr3">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc9"></div>
+                <div class="gameCell" id="gc10"></div>
+                <div class="gameCell" id="gc11"></div>
+                <div class="gameCell" id="gc12"></div>
+            </div>
+            <div class="gameRow" id="gr2">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc5"></div>
+                <div class="gameCell" id="gc6"></div>
+                <div class="gameCell" id="gc7"></div>
+                <div class="gameCell" id="gc8"></div>
+            </div>
+            <div class="gameRow" id="gr1">
+                <div class="checkCell">
+                    <div class="check" id="check1"></div>
+                    <div class="check" id="check2"></div>
+                    <div class="check" id="check3"></div>
+                    <div class="check" id="check4"></div>
+                </div>
+                <div class="gameCell" id="gc1"></div>
+                <div class="gameCell" id="gc2"></div>
+                <div class="gameCell" id="gc3"></div>
+                <div class="gameCell" id="gc4"></div>
+            </div>
+        </div>
+        
+        <div class="rightBar">
+
+            <div class= "rightBarBtn" id="popBtn">
+                <
+            </div>
+
+            <div class="rightBarBtn" id="startBtn">
+                play
+            </div>
+
+            <div id="colorPicker">
+                <div class="color red"></div>
+                <div class="color blue"></div>
+                <div class="color white"></div>
+                <div class="color green"></div>
+                <div class="color black"></div>
+                <div class="color yellow"></div>
+            </div>
+        </div>
+    </div>    
+    <script src="js/script.js"></script>
+    <script src="js/navAnimation.js"></script>
+</body>
+</html>
